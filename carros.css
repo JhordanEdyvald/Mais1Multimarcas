@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Inter;
+    src: url('fontes/Inter-Regular.ttf');
+}
+
+:root{
+    --amarelo:#e7d50a;
+}
+
+body{
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.admArea {
+    background-color: var(--amarelo);
+    color:#000;
+    width:150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: INTER;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.admArea:hover {
+    transition: .3s;
+    color: var(--amarelo);
+    background-color: #000;
+    border:1px solid var(--amarelo);
+}
+
+.titulo{
+    color: #fff;
+    font-family: Inter;
+}
+
+#sessao-carro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carros-container {
+    width: 90%;
+    height: 90vh;
+    background-color: var(--amarelo);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    border-radius: 15px;
+    padding: 30px 0 0 0;
+    padding-bottom: 37px;
+    overflow: auto;
+    z-index: 150;
+}
+
+.card{
+    width: 350px;
+    box-shadow: 0px 0px 16px -5px black;
+    height: 500px;
+}
+
+.card img{
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+
+.card-title{
+    text-transform: uppercase;
+}
+
+.cor-focus:focus{
+    color: #e7d50a!important;
+}
+
+.card-text{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.excluir{
+    position: absolute;
+    top: 191px;
+    left: 7px;
+    font-family: cursive;
+    font-size: 2em;
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 14px;
+    filter: drop-shadow(3px 4px 4px #a3a3a3);
+    transition: .3s;
+    text-shadow: 0 0 3px #83081f;
+    color: #83081f;
+    border: 1px solid #83081f;
+}
+
+.excluir:hover{
+    color: #ffffff;
+    background: #83081f;
+    transform: rotateZ(2deg) scale(0.9);
+    filter: drop-shadow(3px 4px 4px #a3a3a3);
+    transition: .3s;
+}
+
+.editar{
+    position: absolute;
+    top: 191px;
+    right: 7px;
+    font-family: cursive;
+    font-size: 2em;
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 14px;
+    filter: drop-shadow(3px 4px 4px #a3a3a3);
+    transition: .3s;
+    text-shadow: 0 0 3px black;
+    color: black;
+    border: 1px solid black;
+}
+
+.editar:hover{
+    color: #ffffff;
+    background: black;
+    transform: rotateZ(2deg) scale(0.9);
+    filter: drop-shadow(3px 4px 4px #a3a3a3);
+    transition: .3s;
+}
+
+footer{
+    position: relative;
+    top: 0vh;
+}
+
+@media only screen and (max-width:761px) {
+    .admArea {
+        display: none;
+    }
+}
+
+@media screen and (max-width:738px){
+    .carros-container{
+        width: 100%;
+        height: 100%;
+        background-color: #0000;
+    }
+
+    .card{
+        margin-bottom: 25px;
+    }
+}
