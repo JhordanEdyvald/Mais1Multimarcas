@@ -97,7 +97,7 @@
         function AdminLogin(){
             global $adminLogin;
             global $admSenha;
-            if($adminLogin == "mb.servicos1810@gmail.com" && $admSenha == "45531020mb") {
+            if($adminLogin == "teste" && $admSenha == "123") {
                 echo "
                 <style>
                 .inserir-btn {
