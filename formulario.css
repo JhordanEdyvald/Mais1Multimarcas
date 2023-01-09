@@ -1,0 +1,161 @@
+@font-face {
+   font-family: 'inter';
+   src: url('./fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+@font-face {
+   font-family: 'k2d';
+   src: url('./fonts/k2d/K2D-Regular.ttf');
+}
+
+body {
+   margin:0;
+   padding:0;
+   content:0;
+   background-color: rgb(0, 0, 0);
+}
+
+.Titulo-editar-container {
+   margin-top:42px;
+}
+
+.editar-titulo{
+   font-family:'k2d';
+   color:#E7D50A;
+   font-size: 2em;
+}
+
+.formularios-containers {
+   height: 500px;
+   width: 85%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.nome-form-editar{
+   height: 30%;
+   background: rgba(0, 128, 0, 0);
+}
+
+.descricao-form-editar{
+   height: 50%;
+   background: #7e186400;
+}
+
+.descricao-form-editar div{
+   display: flex;
+}
+
+.titulo-nome-editar {
+   font-family: 'inter';
+   font-size: 25px;
+   text-align: left;
+   color: #E7D50A;
+   margin: 25px 0 0 0;
+}
+
+.nome-form-editar-input {
+   width: 100%;
+   margin-top: 10px;
+   border-radius: 9px;
+   height: 33px;
+   box-shadow: 0 0 6px 1px #E7D50A;
+   border: none;
+   font-size: 1.5em;
+   padding: 15px;
+}
+
+.titulo-descricao-editar{
+   font-family: 'inter';
+   font-size: 25px;
+   text-align: left;
+   color: #E7D50A;
+   margin: 0 0 0 0;
+}
+
+.titulo-descricao-editar.aviso{
+   color: #626262;
+   text-align: center;
+   width: calc(100% - 25%);
+}
+
+.descricao-form-editar-input{
+   width: 100%;
+   margin-top: 10px;
+   border-radius: 9px;
+   height: 171px;
+   box-shadow: 0 0 6px 1px #E7D50A;
+   border: none;
+   font-size: 1.5em;
+   padding: 15px;
+}
+
+.descricao-form-editar-input::-webkit-scrollbar{
+   display: none;
+}
+
+.descricao-form-editar-input:focus{
+   border:none;
+}
+
+.preco-ano-editar-container {
+   height: 20%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.editar-preco-container {
+   height: 100%;
+   width: 40%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+}
+
+.editar-ano-container {
+   height: 100%;
+   width: 40%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+}
+
+.titulo-editarPreco-editar {
+   font-family: 'inter';
+   font-size: 25px;
+   text-align: left;
+   color: #E7D50A;
+}
+
+.editarPreco-form-input {
+   width: 100%;
+   border-radius: 9px;
+   height: 41px;
+   box-shadow: 0 0 6px 1px #E7D50A;
+   border: none;
+   font-size: 1.5em;
+   padding: 15px;
+   text-align: center;
+}
+
+.titulo-editarAno-editar {
+   font-family: 'inter';
+   font-size: 25px;
+   text-align: left;
+   color: #E7D50A;
+}
+
+.editarAno-form-input {
+   width: 100%;
+   border-radius: 9px;
+   height: 41px;
+   box-shadow: 0 0 6px 1px #E7D50A;
+   border: none;
+   font-size: 1.5em;
+   padding: 15px;
+   text-align: center;
+}

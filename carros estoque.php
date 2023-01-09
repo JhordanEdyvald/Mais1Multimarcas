@@ -46,7 +46,7 @@
         <div class="carros-container">
                 <?php
                 include('mudarpreco.php');
-                    require_once('mostrar.php');
+                require_once('mostrar.php');
                 ?>
             </div>
     </section>
@@ -128,7 +128,6 @@
                 
                 .uploadImagemContainer {
                     width: 100%;
-                    height: 20vh;
                     background: #d9d9d9;
                     box-shadow: 0px 0px 4px 1px #b7b7b7;
                     margin-bottom: 12px;
@@ -162,14 +161,14 @@
                     color:#000;
                     border:1px solid #000;
                     background: #e7d50a;
-                    trasition:.3s;
+                    transition:.3s;
                 }
                 
                 .turbo-btn:focus {
                     color:#000;
                     border:1px solid #000;
                     background: #e7d50a;
-                    trasition:.3s;
+                    transition:.3s;
                 }
 
                 .turboancora input[type='file'] {
@@ -182,105 +181,455 @@
                     }
                 }
 
+                :root{
+                    --amarelo:#e7d50a;
+                }
+                
+                @font-face {
+                    font-family: fonte padrao;
+                    src: url(fontes/Inter-Regular.ttf);
+                }
+                
+                *{
+                    margin:0 ;
+                    padding: 0;
+                }
+                
+                body {
+                    text-align: center;
+                    background-color: #000;
+                }
+                
+                .navbar-menu{
+                    background: #000;
+                    height: 90px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; 
+                    width: 100%;
+                    color: var(--amarelo);
+                }
+                
+                .tela-nav{
+                    position: fixed;
+                    top: 0;
+                }
+                
+                .logo-menu {
+                    height: 90px;
+                }
+                
+                .logo-menu img {
+                    height: 90px;
+                }
+                
+                .botoes-navbar {
+                    width: 60%;
+                }
+                
+                .botoes-navbar ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    list-style: none;
+                }
+                
+                .itens-menu {
+                    padding: 0 10px;
+                }
+                
+                .itens-menu a{
+                    color: var(--amarelo);
+                    text-decoration: none;
+                    font-family: fonte padrao;
+                    transition: .5s;
+                    font-size: 1.2em;
+                }
+                
+                .itens-menu a:hover{
+                    color:#fff;
+                    transition: .5s;
+                }
+                
+                .banner {
+                    width: 100%;
+                    height: calc(100vh - 90px);
+                }
+                
+                .banner img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .contatos {
+                    height: calc(100vh - 180px);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 70px;
+                }
+                
+                .botoes-contato-container {
+                    width: 100%;
+                    height: 25%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .botoes-contato {
+                    width: 100%;
+                    height: 65%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .botoes-contato a {
+                    width: 65px;
+                    margin: 0 10px;
+                }
+                
+                .botoes-contato img {
+                    width: 65px;
+                }
+                
+                .botoes-contato-container span {
+                    color: #fff;
+                    font-family: 'fonte padrao';
+                    font-size: 1.5em;
+                }
+                
+                .endereco {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 15%;
+                    color: #fff;
+                    font-family: 'fonte padrao';
+                    font-size: 1.5em;
+                }
+                
+                .info-contatos {
+                    height: 400px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .grade-info-container {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    max-width: 800px;
+                    width: 100%;
+                }
+                
+                .container-informacao-cada {
+                    width: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .container-informacao-cada img {
+                    width: 65px;
+                    height: 65px;
+                    object-fit: cover;
+                }
+                
+                .container-informacao-cada span {
+                    color: #fff;
+                    font-size: 1.5em;
+                    width: 70%;
+                    font-family: 'fonte padrao';
+                }
+                
+                .rodape-container {
+                    background-color: #fff;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: sans-serif;
+                }
+                
+                .rodapePrimeiro {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                
+                .rodapeSegundo {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2em;
+                }
+                
+                .dataContainer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50%;
+                    width: 100%;
+                }
+                
+                .dias {
+                    display: flex;
+                    justify-content: end;
+                    text-align: right;
+                    margin-right: 10px;
+                }
+                
+                .horario {
+                    text-align: left;
+                }
+                
+                .carroicon {
+                    width: 130px;
+                }
+                /*AREA DE RESPONSIVIDADE*/
+                
+                @media only screen and (max-width: 616px) {
+                    .itens-menu a {
+                        font-size: 1em;
+                    }
+                
+                    .botoes-contato img {
+                        width: 45px;
+                    }
+                
+                    .botoes-contato-container span {
+                        font-size: 1.3em;
+                    }
+                
+                    .container-informacao-cada img {
+                        width: 45px;
+                        height: 45px;
+                    }
+                
+                    .endereco {
+                        font-size: 1em;
+                    }
+                
+                }
+                
+                @media only screen and (max-width:530px){
+                    .navbar-menu {
+                        background: #000;
+                        height: 134px;
+                        flex-direction: column;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        color: var(--amarelo);
+                    }
+                    .botoes-navbar {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                
+                    .itens-menu a {
+                        font-size: 0.9em;
+                    }
+                
+                    .container-informacao-cada span {
+                        font-size: 1.2em;
+                    }
+                
+                    .botoes-navbar ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        list-style: none;
+                    }
+                
+                    .rodapeSegundo {
+                        font-size: 0.6em;
+                    }
+                }
+
+                .input-EscolherFoto{
+                    width: 60px;
+                    height: 56px;
+                    border-radius: 14px;
+                    background: url('./imagens/sem-imagem.png');
+                    background-color: #fff;
+                    background-repeat: no-repeat;
+                    background-position:center;
+                    box-shadow: 0px 3px 3px 1px #8b8b8b;
+                    transition: .3s ease-out;
+                }
+                
+                .input-EscolherFoto:hover {
+                    background-color: rgb(250, 229, 0);
+                    transition: .3s ease-out;
+                }
+                
+                #criar-carro {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .selecao-imagens-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .select-imagem-container{
+                    width: 75px;
+                    height: 110px;
+                    margin-top: 8px;
+                }
+                
+                .titulo-select-img{
+                    font-size: 0.8em;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                
+                .form-label.tamanho{
+                    font-size: 0.8em;
+                    margin-top: 10px;
+                }
+                
+                .desativados {
+                    background-color: #B6B6B6;
+                    pointer-events: none;
+                }
+                
+
                 </style>
                 <div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                    <div class='modal-dialog'>
-                        <div class='modal-content'>
-                            <div class='modal-header'>
-                                <h5 class='modal-title' id='exampleModalLabel'>NOVO CARRO ;)</h5>
-                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                            </div>
-                    <div class='modal-body'>
-                        <div class='input-group'>
-                            <div class='uploadImagemContainer'>
-                                <div class='mb-3'>
-                                    <form method='POST' id='criar-carro' enctype='multipart/form-data'>
-                                                <label for='formFile' class='form-label'>ESCOLHA A IMAGEM DO VEÍCULO</label>
-                                                <input class='form-control' name='arquivodeimg' type='file' id='formFile'>
-                                                </div>
-                                                </div>
-                                                <span class='input-group-text'>Nome do carro | preço</span>
-                                                <input type='text' name='carro' required aria-label='Nome' class='form-control'>
-                                                <input type='number' name='preco' aria-label='Preço' class='form-control'>
-                                            </div>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='exampleModalLabel'>NOVO CARRO ;)</h5>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+        <div class='modal-body'>
+            <div class='input-group'>
+                <div class='uploadImagemContainer'>
+                    <div class='mb-3'>
+                        <form method='POST' id='criar-carro' enctype='multipart/form-data'>
+                                    <label class='form-label tamanho'>SELECIONE AS IMAGENS<br> 
+                                        NÃO É NECESSÁRIO PREENCHER TODOS OS CAMPOS!<br> 
+                                        É OBRIGATÓRIO PREENCHER APENAS O PRIMEIRO.</label>
+
+                                    <div class='selecao-imagens-container'>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>IMAGEM PRINCIPAL</h1>
+                                            <label for='arquivodeimg1' id='primeiraFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg1' type='file' required id='arquivodeimg1' style='visibility:hidden;'>
+                                            </label>
                                         </div>
-                                        <div class='form-floating'>
-                                            <textarea class='form-control' placeholder='Descrição' id='floatingTextarea2' name='descricao' maxlength='125' style='height: 100px' required></textarea>
-                                            <label for='floatingTextarea2'>Descrição</label>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>SEGUNDA IMAGEM</h1>
+                                            <label for='arquivodeimg2' id='segundaFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg2' type='file' id='arquivodeimg2' style='visibility:hidden;'>
+                                            </label>
                                         </div>
-                                        <div class='input-group input-group-sm mb-3'>
-                                            <span class='input-group-text' id='inputGroup-sizing-sm'>Ano</span>
-                                            <input type='number' class='form-control' name='ano' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm' required>
-                                            <span class='input-group-text' id='inputGroup-sizing-sm'>BOTÃO SAIBA MAIS</span>
-                                            <input type='text' class='form-control' name='linksaibamais' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm'>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>TERÇEIRA IMAGEM</h1>
+                                            <label for='arquivodeimg3' id='terceiraFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg3' type='file' id='arquivodeimg3' style='visibility:hidden;'>
+                                            </label>
                                         </div>
-                                        <div class='modal-footer'>
-                                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                            <button type='submit' name='enviarform' id='CriarCarroBtn' class='btn btn-warning'>Criar</button>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>QUARTA IMAGEM</h1>
+                                            <label for='arquivodeimg4' id='quartaFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg4' type='file' id='arquivodeimg4' style='visibility:hidden;'>
+                                            </label>
                                         </div>
-                                        </form>
-                                        <form method='POST' enctype='multipart/form-data'>
-                                        <div id='turbo-container'>
-                                        <a type='button' href='./exemplo.xlsx' download='Molde para subir multiplos arquivos para o site.xlsx' class='btn btn-dark' >EXEMPLO</a>
-                                                 <div class='turboancora'>
-                                                    <label for='arquivoxmlturbo' class='turbo-btn btn btn-warning'>
-                                                    <input type='file' name='arquivoxmlturbo' id='arquivoxmlturbo' class='turbo-btn btn btn-warning' type='file' required>
-                                                        MODO TURBO <img src='https://cdn-icons-png.flaticon.com/512/126/126477.png' style='margin-left:5px;' width='25'>
-                                                    </label>        
-                                                </div>
-                                                <div class='turboancora'>
-                                                        <label for='imagensSelecaoTurbo' class='turbo-btn btn btn-warning' style='margin-left:5px;'>
-                                                        <img src='https://cdn.pixabay.com/photo/2012/04/11/17/31/camera-29061_960_720.png' width='30'>
-                                                        </label>
-                                                    <input type='file' multiple name='imagensSelecaoTurbo[]' id='imagensSelecaoTurbo'>
-                                                </d+iv>
-                                                </div>
-                                                <button type='submit' name='enviarmodoturbo' id='CriarCarroBtn' class='btn btn-secundary turbo-btn'>ENVIAR</button>
-                                        <form>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>QUINTA IMAGEM</h1>
+                                            <label for='arquivodeimg5' id='quintaFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg5' type='file' id='arquivodeimg5' style='visibility:hidden;'>
+                                            </label>
+                                        </div>
+                                        <div class='select-imagem-container'>
+                                            <h1 class='titulo-select-img'>SEXTA IMAGEM</h1>
+                                            <label for='arquivodeimg6' id='sextaFoto' class='input-EscolherFoto desativados'>
+                                                <input class='form-control' name='arquivodeimg6' type='file' id='arquivodeimg6' style='visibility:hidden;'>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                    </div>
+                                    <span class='input-group-text'>Nome do carro | preço</span>
+                                    <input type='text' name='carro' required aria-label='Nome' class='form-control'>
+                                    <input type='number' name='preco' aria-label='Preço' class='form-control'>
                                 </div>
                             </div>
-                        </div>
+                            <div class='form-floating'>
+                                <textarea class='form-control' placeholder='Descrição' id='floatingTextarea2' name='descricao' maxlength='125' style='height: 100px' required></textarea>
+                                <label for='floatingTextarea2'>Descrição</label>
+                            </div>
+                            <div class='input-group input-group-sm mb-3'>
+                                <span class='input-group-text' id='inputGroup-sizing-sm'>Ano</span>
+                                <input type='number' class='form-control' name='ano' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm' required>
+                                <span class='input-group-text' id='inputGroup-sizing-sm'>BOTÃO SAIBA MAIS</span>
+                                <input type='text' class='form-control' name='linksaibamais' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm'>
+                            </div>
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                <button type='submit' name='enviarform' id='CriarCarroBtn' class='btn btn-warning'>Criar</button>
+                            </div>
+                            </form>
+                            <form method='POST' enctype='multipart/form-data'>
+                            <div id='turbo-container'>
+                            <a type='button' href='./exemplo.xlsx' download='Molde para subir multiplos arquivos para o site.xlsx' class='btn btn-dark' >EXEMPLO</a>
+                                     <div class='turboancora'>
+                                        <label for='arquivoxmlturbo' class='turbo-btn btn btn-warning'>
+                                        <input type='file' name='arquivoxmlturbo' id='arquivoxmlturbo' class='turbo-btn btn btn-warning' type='file' required>
+                                            MODO TURBO <img src='https://cdn-icons-png.flaticon.com/512/126/126477.png' style='margin-left:5px;' width='25'>
+                                        </label>        
+                                    </div>
+                                    <div class='turboancora'>
+                                            <label for='imagensSelecaoTurbo' class='turbo-btn btn btn-warning' style='margin-left:5px;'>
+                                            <img src='https://cdn.pixabay.com/photo/2012/04/11/17/31/camera-29061_960_720.png' width='30'>
+                                            </label>
+                                        <input type='file' multiple name='imagensSelecaoTurbo[]' id='imagensSelecaoTurbo'>
+                                    </div>
+                                    <button type='submit' name='enviarmodoturbo' id='CriarCarroBtn' class='btn btn-secundary turbo-btn'>ENVIAR</button>
+                            <form>
                     </div>
-                    <div class='inserir-btn' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>
-                    ADICIONAR CARRO
-                    </div>
-                    <div class='modal fade' id='modalEditarpreco' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                    <div class='modal-dialog'>
-                        <div class='modal-content'>
-                        <div class='modal-header'>
-                            <h5 class='modal-title' id='exampleModalLabel'>EDITAR PREÇO</h5>
-                        </div>
-                        <div class='modal-body'>
-                            <input type='number' id='mudarpreco' class='btn btn-outline-warning' min='0' placeholder='NOVO PREÇO'>
-                        </div>
-                        <div class='modal-footer'>
-                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>FECHAR</button>
-                            <button type='button' id='finalizarEditPreco' name='finalizarEditarPreco' class='btn btn-warning'>ENVIAR NOVO PREÇO</button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='inserir-btn' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+        ADICIONAR CARRO
+        </div>
+        <div class='modal fade' id='modalEditarpreco' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 class='modal-title' id='exampleModalLabel'>EDITAR PREÇO</h5>
+            </div>
+            <div class='modal-body'>
+                <input type='number' id='mudarpreco' class='btn btn-outline-warning' min='0' placeholder='NOVO PREÇO'>
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>FECHAR</button>
+                <button type='button' id='finalizarEditPreco' name='finalizarEditarPreco' class='btn btn-warning'>ENVIAR NOVO PREÇO</button>
+            </div>
+            </div>
+        </div>
+        </div>
             ";
-                    echo"
-                    <script>
-                        function addId() {
-                            var idselecionado = event.target.parentNode.parentNode.id;
-                            var nome = 'id';
-                            var valor = parseInt(idselecionado);
-                            var validade = '';
-                            var local = 'path=/';
-                            document.cookie = nome + '=' + (valor || '') + validade + '; '+local;
-                        }
-                        
-                        document.querySelector('#finalizarEditPreco').addEventListener('click',function(){
-                        var pegarId = document.cookie.search('id=');
-                        var calculo = pegarId + 3;
-                        var idFinal = document.cookie.slice(calculo);
-                        var novoPreco = document.querySelector('#mudarpreco').value;
-                        window.location = window.location.href+'?iasdfdasdf='+idFinal+'&novasdfopaaaareco='+novoPreco;
-                        });
-                    </script>
-                    ";
             }else{
                 echo "<script>
                         window.alert('Senha e login incorreto Você não tem acesso as configurações de administrador!');
@@ -292,7 +641,7 @@
     }
     ?>
 
-<footer>
+    <footer>
         <div class="rodape-container" style="margin:80px 0 0 0;">
             <div class="rodapePrimeiro">
                 <video src="imagens/27.07.2022_03.18.47_REC.mp4" autoplay preload muted loop class="carroicon"></video>
@@ -318,5 +667,7 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.6.1.min.js'></script>
+    <script src='./imagens-esquema-publicar.js'></script>
 </body>
 </html>
