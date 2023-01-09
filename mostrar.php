@@ -1,7 +1,7 @@
 <?php
 include('conexao.php');
-$login = "mb.servicos1810@gmail.com";
-$senha = "45531020mb";
+$login = "teste";
+$senha = "123";
 
 $query = mysqli_query($con, 'SELECT * FROM informacoes ORDER BY id');
 while($linha = $query->fetch_array()){
