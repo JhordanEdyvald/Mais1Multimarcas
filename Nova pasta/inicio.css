@@ -1,0 +1,279 @@
+:root{
+    --amarelo:#e7d50a;
+}
+
+@font-face {
+    font-family: fonte padrao;
+    src: url(fontes/Inter-Regular.ttf);
+}
+
+*{
+    margin:0 ;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    padding-top: 90px;
+    background-color: #000;
+}
+
+.navbar-menu{
+    background: #000;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    color: var(--amarelo);
+}
+
+.tela-nav{
+    position: fixed;
+    top: 0;
+}
+
+.logo-menu {
+    height: 90px;
+}
+
+.logo-menu img {
+    height: 90px;
+}
+
+.botoes-navbar {
+    width: 60%;
+}
+
+.botoes-navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+}
+
+.itens-menu {
+    padding: 0 10px;
+}
+
+.itens-menu a{
+    color: var(--amarelo);
+    text-decoration: none;
+    font-family: fonte padrao;
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+.itens-menu a:hover{
+    color:#fff;
+    transition: .5s;
+}
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.contatos {
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.botoes-contato-container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes-contato {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes-contato a {
+    width: 65px;
+    margin: 0 10px;
+}
+
+.botoes-contato img {
+    width: 65px;
+}
+
+.botoes-contato-container span {
+    color: #fff;
+    font-family: 'fonte padrao';
+    font-size: 1.5em;
+}
+
+.endereco {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    color: #fff;
+    font-family: 'fonte padrao';
+    font-size: 1.5em;
+}
+
+.info-contatos {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grade-info-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.container-informacao-cada {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-informacao-cada img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.container-informacao-cada span {
+    color: #fff;
+    font-size: 1.5em;
+    width: 70%;
+    font-family: 'fonte padrao';
+}
+
+.rodape-container {
+    background-color: #fff;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.rodapePrimeiro {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rodapeSegundo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.dataContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+}
+
+.dias {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.horario {
+    text-align: left;
+}
+
+.carroicon {
+    width: 130px;
+}
+/*AREA DE RESPONSIVIDADE*/
+
+@media only screen and (max-width: 616px) {
+    .itens-menu a {
+        font-size: 1em;
+    }
+
+    .botoes-contato img {
+        width: 45px;
+    }
+
+    .botoes-contato-container span {
+        font-size: 1.3em;
+    }
+
+    .container-informacao-cada img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .endereco {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width:530px){
+    .navbar-menu {
+        background: #000;
+        height: 134px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: var(--amarelo);
+    }
+    .botoes-navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .itens-menu a {
+        font-size: 0.9em;
+    }
+
+    .container-informacao-cada span {
+        font-size: 1.2em;
+    }
+
+    .botoes-navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .rodapeSegundo {
+        font-size: 0.6em;
+    }
+}

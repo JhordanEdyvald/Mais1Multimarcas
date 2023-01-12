@@ -4,8 +4,6 @@ const terceiroInput = document.querySelector('#arquivodeimg3');
 const quartoInput = document.querySelector('#arquivodeimg4');
 const quintoInput = document.querySelector('#arquivodeimg5');
 const sextoInput = document.querySelector('#arquivodeimg6');
-const PrimeiraImg = document.querySelector('#FirstImg');
-var valorBoleano = true;
 
 if (primeiroInput.value == '') {
     //SE O INPUT ESTIVER VAZIO
@@ -16,12 +14,12 @@ if (primeiroInput.value == '') {
 //PRIMEIRO INPUT CONFGS
 primeiroInput.addEventListener('change', function(){
     //SE O INPUT ESTIVER OCUPADO PELO ARQUIVO DE IMAGEM
-    //$('#primeiraFoto').get(0).style.backgroundColor = '#FFC107';
-    if(primeiroInput.value != ''){
+    $('#primeiraFoto').get(0).style.backgroundColor = '#FFC107';
+    if(primeiroInput.value !== ''){
         $('#segundaFoto').removeClass('desativados');
     }
     if(primeiroInput.value == ''){
-        $('#primeiraFoto').get(0).style.backgroundColor = 'none';
+        $('#primeiraFoto').get(0).style.backgroundColor = '#fff';
 
         $('#segundaFoto').addClass('desativados');
         segundoInput.value = '';
@@ -143,23 +141,4 @@ sextoInput.addEventListener('change', function(){
      if(sextoInput.value == ''){
          $('#sextaFoto').get(0).style.backgroundColor = '#fff';
      }
-});
-
-
-PrimeiraImg.addEventListener('click',()=>{
-    if(primeiroInput.value == ''){
-        if(valorBoleano){
-            document.querySelector('#primeiraFoto').classList.add('desativados');
-            document.querySelector('#segundaFoto').classList.remove('desativados');
-            document.querySelector('#segundaFoto').style.boxShadow = 'rgb(231 213 10) 0px 0px 6px 1px';
-            document.querySelector('#primeiraFoto').style.boxShadow = 'none';
-            valorBoleano = false;
-        }else {
-            document.querySelector('#primeiraFoto').classList.remove('desativados');
-            document.querySelector('#segundaFoto').classList.add('desativados');
-            document.querySelector('#segundaFoto').style.boxShadow = 'none';
-            document.querySelector('#primeiraFoto').style.boxShadow = 'rgb(231 213 10) 0px 0px 6px 1px';
-            valorBoleano = true;
-        }
-    }
 });

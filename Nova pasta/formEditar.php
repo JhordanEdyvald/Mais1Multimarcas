@@ -198,9 +198,6 @@
                 </div>
             </div>
         </div>
-        <div class="editarPrimeiraImagem">
-            <input type="button" id="FirstImg" value="Usar primeira imagem atual">
-        </div>
 
         <section class="editarImgContainer">
             <div class="imagens-editar">
